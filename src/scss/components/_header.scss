@@ -1,5 +1,6 @@
 .header {
   padding: 23px 0;
+  padding-bottom: 21px;
   // .header__container
 
   &__container {
@@ -18,34 +19,6 @@
   background-color: $white;
 }
 
-.logo {}
-
-.nav {
-
-  // .nav__list
-
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  // .nav__item
-
-  &__item {
-    &:not(:last-child) {
-      margin-right: 40px;
-    }
-  }
-
-  // .nav__link
-
-  &__link {
-    font-weight: 700;
-    line-height: 1.6;
-    color: $dark-grey;
-  }
-}
 
 
 .header-contacts {
