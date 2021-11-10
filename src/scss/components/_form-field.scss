@@ -36,4 +36,13 @@
   &__btn{
     padding: 11px 28px;
   }
+
+  &--dark{
+    width: 100%;
+
+    .form-field__input{
+      width: 100%;
+      background-color: $grey-200;
+    }
+  }
 }

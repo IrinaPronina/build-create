@@ -1,0 +1,153 @@
+.recent-news {
+
+  // .recent-news__title
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  // .recent-news__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 255px);
+    gap: 30px;
+  }
+
+  // .recent-news__item
+
+  &__item {
+    grid-column: 5 span;
+    grid-row: 1 span;
+
+    &:first-child {
+      grid-column: 7 span;
+      grid-row: 2 span;
+    }
+  }
+}
+
+.recent-article {
+  box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.16), 0px 30px 24px -10px rgba(154, 156, 165, 0.1), 0px 12px 10px -6px rgba(154, 156, 165, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+  border-radius: 4px;
+  height: 100%;
+  overflow: hidden;
+
+  // .recent-article__img
+
+  &__img {
+    margin-bottom: 16px;
+  }
+
+  // .recent-article__text
+
+  &__text {
+    padding: 0 24px 24px 24px;
+  }
+
+  // .recent-article__title
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  // .recent-article__link
+
+  &__link {
+    font-size: 20px;
+    font-weight: 700;
+    color: $dark;
+  }
+
+  // .recent-article__meta
+
+  &__meta {}
+
+  &__descr {
+    line-height: 1.6;
+    color: $dark-grey;
+    display: none;
+  }
+
+  &--big {
+    .recent-article__descr {
+      display: block;
+    }
+
+    .recent-article__img {
+      margin-bottom: 24px;
+    }
+
+    .recent-article__title {
+      margin-bottom: 12px;
+    }
+
+    .recent-article__meta {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.recent-meta {
+
+
+
+  // .recent-meta__item
+
+  &__item {
+    font-size: 14px;
+    color: $grey-700;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: -13px;
+        width: 1px;
+        height: 11px;
+        color: inherit;
+        background-color: $grey-700;
+      }
+    }
+
+
+  }
+
+  // .recent-meta__item--comment
+
+  &__item--comment {
+    background-image: url(../img/comments.svg);
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: left center;
+    padding-left: 24px;
+  }
+
+  // .recent-meta__descr
+
+
+}
+
+.portfolio-section {
+
+  // .portfolio-section__learn
+
+  &__learn {}
+
+  // .portfolio-section__subtitle
+
+  &__subtitle {}
+
+  // .portfolio-section__btn
+
+  &__btn {}
+}
+
+.btn {}
+
+.btn--fill {}

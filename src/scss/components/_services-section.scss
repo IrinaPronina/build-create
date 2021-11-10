@@ -1,0 +1,150 @@
+.services-section {
+  padding-top: 212px;
+  background-image: url('../img/bg-services.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 85px;
+
+  // .services-list__content
+
+  &__content {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.services-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 86px 10px;
+  padding-bottom: 90px;
+  position: relative;
+  background: $white;
+  border: 1px solid $grey-300;
+  box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  border-radius: 4px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    background-color: $dark;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    border-radius: inherit;
+    background-color: rgba($color: $dark, $alpha: 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &--contruction {
+    &::before {
+      background-image: url(../img/services-img1.jpg);
+    }
+  }
+
+  &--dev {
+    &::before {
+      background-image: url(../img/services-img2.jpg);
+    }
+  }
+
+  &--interior {
+    &::before {
+      background-image: url(../img/services-img3.jpg);
+    }
+  }
+
+  &--repairs {
+    &::before {
+      background-image: url(../img/services-img4.jpg);
+    }
+  }
+
+  // .services-item__icon
+
+  &__icon {
+    margin-bottom: 23px;
+    width: 52px;
+    height: 52px;
+    fill: $primary;
+    object-fit: cover;
+    z-index: 10;
+    transition: fill 0.3s ease-in-out;
+  }
+
+  // .services-item__title
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: $dark;
+    text-align: center;
+    z-index: 10;
+    transition: color 0.3s ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+
+    .services-item__icon {
+      fill: $white;
+    }
+
+    .services-item__title {
+      color: $white;
+    }
+  }
+}
+
+.services-section {
+
+  // .services-section__learn
+
+  &__learn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  // .services-section__subtitle
+
+  &__subtitle {
+    margin-right: 40px;
+    font-size: 28px;
+    font-weight: 700;
+    color: $dark;
+  }
+
+}

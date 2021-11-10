@@ -62,7 +62,7 @@ button {
   cursor: pointer;
 }
 
-section{
+section {
   padding: 120px 0;
 }
 
@@ -72,10 +72,28 @@ section{
   padding: 0;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1260px;
+}
+
+.centered {
+  text-align: center;
+  width: 100%;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -124,7 +142,13 @@ section{
 
 .btn--stroke--light {
   border-color: $white;
-  
+
+}
+
+.btn--stroke {
+  border-color: $primary;
+  color: $primary;
+
 }
 
 .btn--fill {
@@ -133,7 +157,7 @@ section{
 }
 
 
-.title{
+.title {
   margin: 0;
   font-weight: 700;
   font-size: 46px;
@@ -141,19 +165,76 @@ section{
   color: $dark;
   margin-bottom: 24px;
 
-  &--center{
+  &--center {
     text-align: center;
   }
 }
 
-.descr{
+.descr {
   margin: 0;
   font-size: 18px;
   color: $dark-grey;
   margin-bottom: 60px;
 
-  &--center{
+  &--center {
     text-align: center;
     margin-bottom: 60px;
+  }
+}
+
+.custom-checkbox {
+  margin-bottom: 24px;
+  &__input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__text {
+    position: relative;
+    display: inline-block;
+    padding-left: 27px;
+    font-size: 14px;
+    line-height: 150%;
+    color: $dark-grey;
+  }
+
+  &__text::before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 1px;
+    display: inline-block;
+    border: 1px solid $primary;
+    border-radius: 3px;
+    width: 16px;
+    height: 16px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &__text::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 1px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/check.svg");
+    background-position: center;
+    background-size: 10px 8px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__input:checked+&__text::before {
+    background-color: $primary;
+  }
+
+  &__input:checked+&__text::after {
+    opacity: 1;
+  }
+
+  &__input:focus+&__text {
+    outline: 3px solid $primary;
   }
 }

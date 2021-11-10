@@ -1,0 +1,114 @@
+.facts {
+  padding-top: 180px;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-image: url(../img/facts-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 570px;
+    height: 1065px;
+    position: absolute;
+    left: -9px;
+    top: -195px;
+    z-index: -1;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  // .facts__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+    margin: 0 auto;
+    min-width: 736px;
+  }
+
+  // .facts__item
+
+  &__item {}
+}
+
+.facts-element {
+
+
+  &__circle {
+    position: relative;
+    width: 148px;
+    height: 148px;
+    margin-bottom: 20px;
+
+    svg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    .progress {
+      stroke: var(--progress-stroke);
+      stroke-dasharray: 929;
+      stroke-dashoffset: 929;
+      animation: anim 2s linear forwards;
+    }
+
+    @keyframes anim{
+      100%{
+        stroke-dashoffset: 18.58;
+      }
+    }
+
+    .progress-bg {
+      stroke: var(--progress-bg-stroke);
+    }
+
+    &--first-color {
+      --progress-stroke: #F89828;
+      --progress-bg-stroke: rgba($color: #F89828, $alpha: 0.3);
+    }
+
+    &--second-color {
+      --progress-stroke: #F52F6E;
+      --progress-bg-stroke: rgba($color: #F52F6E, $alpha: 0.3);
+    }
+
+    &--third-color {
+      --progress-stroke: #5A87FC;
+      --progress-bg-stroke: rgba($color: #5A87FC, $alpha: 0.3);
+    }
+
+    &--fourth-color {
+      --progress-stroke: #03CEA4;
+      --progress-bg-stroke: rgba($color: #03CEA4, $alpha: 0.3);
+    }
+  }
+
+  // .facts-element__value
+
+  &__value {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 32px;
+    font-weight: 700;
+    color: $dark;
+    transform: translate(-50%, -50%);
+  }
+
+  // .facts-element__text
+
+  &__text {
+    font-size: 14px;
+    color: $dark;
+
+  }
+}
+
+.circle-anim {}
