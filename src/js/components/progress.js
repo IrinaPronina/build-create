@@ -1,4 +1,4 @@
-const circle = document.querySelector('.progress');
+/* const circle = document.querySelector('.progress');
 const number = document.querySelector('.facts-element__value');
 
 let counter = 0;
@@ -11,3 +11,4 @@ setInterval(() => {
     number.innerHTML = counter + "%";
   }
 }, 20);
+ */

@@ -1,0 +1,138 @@
+.pricing {
+  background-color: $grey-200;
+  padding-bottom: 0;
+  overflow: hidden;
+  position: relative;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  // .pricing__title
+
+  &__title {
+    text-align: center;
+  }
+
+  // .pricing__subtitle
+
+  &__subtitle {
+    text-align: center;
+    color: $grey-700;
+    margin-bottom: 60px;
+  }
+
+  &__table {
+    z-index: 5;
+  }
+}
+
+.table-wrapper {
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+  border: 1px solid $grey-300;
+  border-collapse: collapse;
+  border-radius: 4px;
+  width: 100%;
+  box-shadow: var(--main-shadow);
+  background-color: $white;
+}
+
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+
+
+
+  // .table__row
+
+  &__row {
+    &:last-child {
+      .table__col {
+        padding: 30px 0;
+      }
+    }
+  }
+
+  // .table__th
+
+  &__th {
+    padding-top: 31px;
+    padding-bottom: 24px;
+    font-size: 18px;
+    font-weight: 700;
+    color: $dark;
+    text-align: left;
+
+    &:first-child {
+      padding: 0 24px;
+    }
+  }
+
+  // .table__heading
+
+  &__heading {
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 2px;
+  }
+
+  // .table__per
+
+  &__per {
+    font-size: 18px;
+    font-weight: 700;
+    color: $grey-700;
+    text-align: center;
+  }
+
+  // .table__body
+
+  &__body {
+    .table__row {
+      &:nth-child(odd) {
+        background-color: $grey-200;
+      }
+    }
+  }
+
+  // .table__col
+
+  &__col {
+    padding: 17px 0;
+    color: $dark-grey;
+    text-align: center;
+
+    &:first-child {
+      text-align: left;
+      padding-left: 24px;
+    }
+
+
+    .btn {
+      padding: 0px 24px;
+      font-size: 12px;
+      line-height: 3;
+    }
+  }
+
+  // .table__check
+
+  &__check {
+    width: 24px;
+    height: 24px;
+    font-size: 0;
+    display: inline-block;
+    background-image: url("../img/mark.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+
+}

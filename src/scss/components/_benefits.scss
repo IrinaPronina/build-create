@@ -1,0 +1,105 @@
+.benefits {
+  background-color: $dark;
+  padding-bottom: 0;
+  color: $white;
+
+  // .benefits__title
+
+  &__title {
+    color: $white;
+  }
+
+  // .benefits__descr
+
+  &__descr {
+    color: rgba($color: $white, $alpha: 0.6);
+  }
+
+  // .benefits__list
+
+  &__list {
+    --mission-gap: 94px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(var(--mission-gap) * 2);
+    margin-bottom: 60px;
+  }
+
+  // .benefits__item
+
+  &__item {
+    text-align: center;
+    padding-top: 70px;
+    background-size: 48px 48px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &:not(:last-child) {
+      &::after {
+        content: '';
+        position: absolute;
+        right: calc(-1 * var(--mission-gap));
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/divider.png);
+      }
+    }
+  }
+
+
+
+  // .benefits__subtitle
+
+  &__subtitle {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  // .benefits__text
+
+  &__text {
+    line-height: 1.56;
+    color: rgba($color: $white, $alpha: 0.6);
+  }
+
+  // .benefits__item--quality
+
+  &__item--quality {
+    background-image: url(../img/ic-contract.svg);
+  }
+
+  // .benefits__item--safety
+
+  &__item--safety {
+    background-image: url(../img/ic-helmet.svg);
+  }
+
+  // .benefits__item--comfort
+
+  &__item--comfort {
+    background-image: url(../img/ic-camera.svg);
+  }
+
+  // .benefits__box
+
+  &__box {
+    text-align: center;
+    transform: translateY(50%);
+  }
+
+  // .benefits__btn
+
+  &__btn {}
+}
