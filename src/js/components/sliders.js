@@ -27,3 +27,21 @@ const testimonialsSlider = new Swiper('.testimonials__slider', {
     prevEl: '.slider-btn__prev',
   },
 });
+
+var projectSlider = new Swiper(".hero-project__nav", {
+  spaceBetween: 20,
+  slidesPerView: 10,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+var projectSliderNav = new Swiper(".hero-project__slider", {
+  spaceBetween: 20,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".project-btn__next",
+    prevEl: ".project-btn__prev",
+  },
+  thumbs: {
+    swiper: projectSlider,
+  },
+});

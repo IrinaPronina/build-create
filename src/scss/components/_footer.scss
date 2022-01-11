@@ -11,7 +11,7 @@
     grid-template-columns: repeat(12, 1fr);
   }
 
-  &logo {
+  &__logo {
     margin-right: 60px;
   }
 
@@ -92,7 +92,9 @@
     display: block;
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    opacity: 0.6;
+    fill: $white;
   }
 }
 

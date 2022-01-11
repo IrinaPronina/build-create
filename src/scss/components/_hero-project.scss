@@ -1,0 +1,73 @@
+.hero-project {
+
+  // .hero-project__title
+
+  &__title {
+    font-size: 64px;
+    line-height: 1.2;
+    text-transform: initial;
+    letter-spacing: 1px;
+    margin-bottom: 60px;
+  }
+
+  // .hero-project__images
+
+  &__images {
+    overflow: hidden;
+  }
+
+  &__slider {
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  // .hero-project__img
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+
+    &--th {
+      border-radius: 4px;
+    }
+  }
+
+  &__nav {
+    .swiper-slide {
+      border-radius: 4px;
+      opacity: 0.6;
+      cursor: pointer;
+      transition: opacity ease 0.3s;
+    }
+
+    .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+  }
+}
+
+.project-btn {
+
+
+  // .project-btn__next
+
+  &__next {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    z-index: 10;
+    padding: 5px;
+    background-color: rgba($color: $white, $alpha: 0.5);
+  }
+
+  &__prev {
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    z-index: 10;
+    padding: 5px;
+    background-color: rgba($color: $white, $alpha: 0.5);
+  }
+}

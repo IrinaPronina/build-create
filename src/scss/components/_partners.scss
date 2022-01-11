@@ -1,6 +1,11 @@
 .partners {
   background-color: $grey-200;
 
+  &--light{
+    padding-top: 180px;
+    background-color: $white;
+  }
+
   &__title {
     margin-bottom: 60px;
   }

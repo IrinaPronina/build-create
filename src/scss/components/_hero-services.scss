@@ -11,9 +11,33 @@
 
   }
 
+  &--work {
+    background-image: url("../img/bg-work.png");
+
+  }
+
   &--inner {
     background-image: url("../img/bg-services-detail.png");
     background-position: right -40px center;
+  }
+
+  &--project {
+    background-color: $white;
+    background-image: url("../img/bg-project.png");
+  }
+
+  &--about {
+    background-color: $grey-200;
+    background-image: url("../img/bg-about.png");
+  }
+
+  &--news {
+    background-color: $grey-200;
+    background-image: url("../img/bg-news.png");
+  }
+  &--contacts {
+    background-color: $grey-200;
+    background-image: url("../img/bg-contacts.png");
   }
 
   // .page-hero__breadcrumbs

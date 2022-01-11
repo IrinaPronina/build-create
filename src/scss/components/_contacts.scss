@@ -1,0 +1,102 @@
+.contacts {
+
+  // .contacts__title
+
+  &__title {}
+
+  // .contacts__descr
+
+  &__descr {}
+
+  // .contacts__content
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .contacts__img
+
+  &__img {
+    margin-right: 20px;
+    object-fit: cover;
+  }
+}
+
+.contactus-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 600px;
+
+
+
+
+  // .contactus-form__field
+
+  &__field {
+    width: 48%;
+    margin-right: 0px;
+
+    &--big {
+      width: 100%;
+
+      .form-field__input--big {
+        height: 126px;
+      }
+    }
+  }
+
+  &__set {
+    border: none;
+    padding: 0;
+    padding-left: 24px;
+    width: 47.5%;
+
+    .form-field__caption {
+      margin-bottom: 21px;
+    }
+  }
+
+  // .contactus-form__select
+
+  &__select {
+    border: 1px solid #D7DADD;
+    background-color: #F4F5F7;
+    border-radius: 4px;
+    width: 260px;
+    height: 44px;
+    padding-left: 16px;
+    color: $dark-grey;
+    appearance: none;
+    background-image: url("../img/chevron-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 13px;
+  }
+
+  &__option {
+    padding: 16px;
+    line-height: 1.6;
+  }
+
+  // .contactus-form__radio
+
+  &__radio {
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  &__var {}
+
+
+  &__choice {}
+
+  &__bottom {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 39px;
+  }
+}

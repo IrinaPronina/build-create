@@ -1,0 +1,71 @@
+.achieve {
+
+  // .achieve__container
+
+  &__container {}
+
+  // .achieve__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+  }
+
+  // .achieve__item
+
+  &__item {
+    grid-column: 3 span;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 70px;
+
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 48px 48px;
+
+
+    &--recom {
+      background-image: url("../img/ic-like.svg");
+      fill: $grey-600;
+    }
+
+    &--aparts {
+      background-image: url("../img/ic-painting.svg");
+      fill: $grey-600;
+    }
+
+    &--spec {
+      background-image: url("../img/ic-helmet-grey.svg");
+      fill: $grey-600;
+    }
+
+    &--finish {
+      background-image: url("../img/ic-pantone.svg");
+      fill: $grey-600;
+    }
+  }
+
+  // .achieve__value
+
+  &__value {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 1.3;
+    color: $primary;
+    margin-bottom: 8px;
+  }
+
+  // .achieve__text
+
+  &__text {
+    font-size: 14px;
+    color: $dark;
+  }
+}
+
+.container {}
+
+.sr-only {}

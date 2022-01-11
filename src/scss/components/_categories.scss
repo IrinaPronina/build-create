@@ -1,0 +1,87 @@
+.categories {
+
+  // .categories__title
+
+  &__title {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  // .categories__nav
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .categories__item
+
+  &__item {
+    margin-bottom: 70px;
+  }
+
+  // .categories__btn
+
+  &__btn {
+    color: $grey-600;
+    border: 1px solid transparent;
+    text-transform: initial;
+    line-height: 1.6;
+    transition: all ease 0.3s;
+
+    &--active {
+      border-color: $primary;
+      color: $primary;
+    }
+  }
+
+  // .categories__news
+
+  &__news {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    row-gap: 60px;
+    margin-bottom: 60px;
+  }
+
+  // .categories__article
+
+  &__article {
+    grid-column: 6 span;
+  }
+
+  &__pag {
+    display: flex;
+    justify-content: center;
+  }
+
+  // .categories__page
+
+  &__page {
+    margin-right: 20px;
+  }
+
+  // .categories__link
+
+  &__link {
+    font-weight: 700;
+    color: $dark-grey;
+    font-size: 16px;
+    line-height: 1.6;
+    transition: color ease 0.3s;
+
+    &--active{
+      color: $primary;
+    }
+  }
+
+  &__icon {
+    display: block;
+    height: 24px;
+    width: 24px;
+    fill: $dark-grey;
+    object-fit: cover;
+  }
+}
