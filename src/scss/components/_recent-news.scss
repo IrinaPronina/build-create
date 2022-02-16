@@ -24,6 +24,16 @@
     &:first-child {
       grid-column: 7 span;
       grid-row: 2 span;
+
+      @include mobile {
+        grid-column: 12 span;
+        grid-row: 2 span;
+      }
+    }
+
+    @include mobile {
+      grid-column: 12 span;
+      grid-row: 1 span;
     }
   }
 }
@@ -34,10 +44,27 @@
   height: 100%;
   overflow: hidden;
 
+  &:hover {
+    .recent-article__link {
+      color: $primary;
+    }
+  }
+
   // .recent-article__img
 
   &__img {
     margin-bottom: 16px;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @include mobile {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
   // .recent-article__text
@@ -58,6 +85,7 @@
     font-size: 20px;
     font-weight: 700;
     color: $dark;
+    transition: all ease-in-out 0.3s;
   }
 
   // .recent-article__meta

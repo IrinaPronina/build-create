@@ -1,7 +1,7 @@
 .partners {
   background-color: $grey-200;
 
-  &--light{
+  &--light {
     padding-top: 180px;
     background-color: $white;
   }
@@ -16,11 +16,22 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 102px;
+
+    @include minidesktop {
+      gap: 40px;
+    }
+
   }
 
   // .partners__item
 
-  &__item {}
+  &__item {
+    @include mobile {
+      grid-column: 2 span;
+      display: flex;
+      justify-content: center;
+    }
+  }
 
   // .partners__link
 

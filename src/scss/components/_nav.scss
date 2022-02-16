@@ -6,6 +6,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include tablet {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
   }
 
   // .nav__item
@@ -13,6 +19,14 @@
   &__item {
     &:not(:last-child) {
       margin-right: 40px;
+
+      @include tablet {
+        margin-right: 0;
+      }
+    }
+
+    @include tablet {
+      padding: 20px 20px;
     }
   }
 
@@ -22,5 +36,51 @@
     font-weight: 700;
     line-height: 1.6;
     color: $dark-grey;
+    transition: all ease-in-out 0.3s;
+
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid $primary;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+
+    &:active {
+      color: $active;
+    }
+
+    &--current {
+      color: $primary;
+    }
+
+    @include tablet {
+      font-size: 32px;
+    }
+
+    @include min {
+      font-size: 28px;
+    }
   }
+
+  @include tablet {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    z-index: 5;
+    background-color: rgba($white, $alpha: 0.98);
+    padding: 100px 30px 30px 30px;
+    transition: left 0.3s ease-in-out 0s;
+  }
+
+  @include min {
+    width: 100%;
+  }
+
+  &.open {
+    left: 0;
+  } 
 }

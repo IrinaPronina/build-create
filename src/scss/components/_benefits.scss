@@ -23,6 +23,19 @@
     grid-template-columns: repeat(3, 1fr);
     gap: calc(var(--mission-gap) * 2);
     margin-bottom: 60px;
+
+    @include minidesktop {
+      --mission-gap: 34px;
+    }
+
+    @include tablet {
+      --mission-gap: 14px;
+    }
+
+    @include mobile {
+      display: block;
+    }
+
   }
 
   // .benefits__item
@@ -52,7 +65,15 @@
         background-position: center;
         background-repeat: no-repeat;
         background-image: url(../img/divider.png);
+
+        @include mobile {
+          display: none;
+        }
       }
+    }
+
+    @include mobile {
+      margin-bottom: 30px;
     }
   }
 

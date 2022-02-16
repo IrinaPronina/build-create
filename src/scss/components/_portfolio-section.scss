@@ -1,6 +1,9 @@
 .porfolio-section {
   padding: 120px 0;
 
+
+
+
   // .porfolio-section__top
 
   &__top {
@@ -16,6 +19,10 @@
     margin: 0;
     max-width: 710px;
     padding-bottom: 12px;
+
+    @include mobile {
+      font-size: 28px;
+    }
   }
 }
 
@@ -36,11 +43,25 @@
   box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
   border-radius: 4px;
   background-color: $white;
+  overflow: hidden;
+  transition: all ease-in-out 0.3s;
+
+  &:hover {
+    .portfolio-item__content {
+      transform: translateY(-70%);
+    }
+
+    .portfolio-item__img {
+      transform: translateY(-2em);
+    }
+  }
 
   // .portfolio-item__img
 
   &__img {
     margin-bottom: 16px;
+    transform: translateY(0);
+    transition: all ease-in-out 0.3s;
   }
 
   // .portfolio-item__content
@@ -49,7 +70,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     padding: 15px 10px;
+    background-color: $white;
+    transition: all ease-in-out 0.3s;
   }
 
   // .portfolio-item__title
@@ -61,6 +85,15 @@
     color: $dark;
     text-align: center;
     margin-bottom: 4px;
+
+    @include minidesktop {
+      font-size: 18px;
+    }
+
+    @include tablet {
+      min-height: 54px;
+    }
+
   }
 
   // .portfolio-item__desc
@@ -75,10 +108,21 @@
   // .portfolio-item__btn
 
   &__btn {
-    display: none;
+    position: absolute;
     margin-top: 24px;
     font-size: 14px;
     padding: 12px 32px;
+    bottom: 0;
+    transform: translateY(100%);
+
+
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // border-radius: 100%;
+    // width: 48px;
+    // height: 48px;
+    // transition: all 0.3s ease-in-out;
   }
 }
 
@@ -92,6 +136,10 @@
     justify-content: center;
     padding: 85px 0 0 0;
 
+    @include min {
+      display: block;
+      text-align: center;
+    }
   }
 
   // .services-section__subtitle
@@ -101,6 +149,17 @@
     font-size: 28px;
     font-weight: 700;
     color: $dark;
+
+    @include mobile {
+      font-size: 22px;
+    }
+
+    @include min {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
   }
+
+
 
 }

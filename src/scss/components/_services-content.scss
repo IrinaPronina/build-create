@@ -4,9 +4,7 @@
   background-color: $white;
   padding-top: 120px;
 
-  &--main{
-    
-  }
+  &--main {}
 
   // .services__list
 
@@ -21,12 +19,20 @@
 
     &:not(:last-child) {
       margin-bottom: 118px;
+
+      @include mobile {
+        margin-bottom: 0;
+      }
     }
 
     &--reverse {
       .services__info {
         order: -1;
         padding-left: 0;
+
+        @include mobile {
+          order: initial;
+        }
       }
 
       .services__image-box {
@@ -34,21 +40,37 @@
         justify-content: flex-end;
       }
     }
+
+    @include mobile {
+      gap: 0;
+    }
   }
 
   &__image-box {
     grid-column: 6 span;
+
+    @include mobile {
+      grid-column: 12 span;
+    }
   }
 
   // .services__img
 
-  &__img {}
+  &__img {
+    object-fit: cover;
+  }
 
   // .services__info
 
   &__info {
     grid-column: 6 span;
     padding: 76px 25px;
+
+    @include mobile {
+      grid-column: 12 span;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   // .services__title
@@ -70,6 +92,7 @@
     bottom: -248px;
     left: 0;
   }
+
   &__bg2 {
     position: absolute;
     top: 500px;

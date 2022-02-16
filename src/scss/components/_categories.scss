@@ -1,5 +1,9 @@
 .categories {
 
+  @include min {
+    padding: 40px 0;
+  }
+
   // .categories__title
 
   &__title {
@@ -12,18 +16,31 @@
   &__nav {
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
   }
 
   // .categories__item
 
   &__item {
-    margin-bottom: 70px;
+    width: calc(100% / 6);
+
+    @include tablet {
+      width: calc(100% / 3);
+    }
+    @include min {
+      width: 100%
+    }
   }
 
   // .categories__btn
 
   &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
     color: $grey-600;
     border: 1px solid transparent;
     text-transform: initial;
@@ -44,12 +61,25 @@
     gap: 30px;
     row-gap: 60px;
     margin-bottom: 60px;
+
+    @include mobile {
+      gap: 0;
+      row-gap: 60px;
+    }
   }
 
   // .categories__article
 
   &__article {
     grid-column: 6 span;
+
+    &--visible {
+      display: block !important;
+    }
+
+    @include mobile {
+      grid-column: 12 span;
+    }
   }
 
   &__pag {
@@ -72,7 +102,7 @@
     line-height: 1.6;
     transition: color ease 0.3s;
 
-    &--active{
+    &--active {
       color: $primary;
     }
   }

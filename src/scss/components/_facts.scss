@@ -2,6 +2,10 @@
   padding-top: 180px;
   position: relative;
 
+  @include mobile {
+    padding-top: 80px;
+  }
+
   &::before {
     content: '';
     background-image: url(../img/facts-bg.png);
@@ -28,15 +32,34 @@
     gap: 48px;
     margin: 0 auto;
     min-width: 736px;
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      min-width: 0;
+      gap: 36px;
+    }
+
+    @include min {
+      display: block;
+    }
   }
 
   // .facts__item
 
-  &__item {}
+  &__item {
+    @include min {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .facts-element {
 
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__circle {
     position: relative;
@@ -53,15 +76,15 @@
     }
 
     .progress {
+      transform: rotate(-90deg) translateX(24px);
+      transform-origin: center;
       stroke: var(--progress-stroke);
-      stroke-dasharray: 929;
-      stroke-dashoffset: 929;
       animation: anim 2s linear forwards;
     }
 
-    @keyframes anim{
-      100%{
-        stroke-dashoffset: 18.58;
+    @keyframes anim {
+      100% {
+        // stroke-dashoffset: 18.58;
       }
     }
 

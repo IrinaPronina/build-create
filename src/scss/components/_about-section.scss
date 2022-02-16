@@ -12,7 +12,11 @@
   border-radius: 4px;
   height: 500px;
 
-  &:before{
+  @include min {
+    height: 300px;
+  }
+
+  &:before {
     content: '';
     position: absolute;
     top: 0;
@@ -21,7 +25,17 @@
     right: 0;
     z-index: 3;
     background-color: rgba($color: $dark, $alpha: 0.6);
+    transition: all ease-in-out 0.3s;
   }
+
+  &--played {
+    &::before {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+  }
+
   // .video-block__play
 
   &__play {
@@ -36,10 +50,32 @@
     justify-content: center;
     transform: translate(-50%, -50%);
     z-index: 10;
+    transition: all ease-in-out 0.3s;
+
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid $primary;
+    }
+
+    &:hover {
+      background-color: $active;
+      border-color: $active;
+    }
+
+    &:active {
+      background-color: $active;
+      border-color: $active;
+    }
+
 
     svg {
       width: 26px;
       height: 26px;
+    }
+
+    &--played {
+      opacity: 0;
+      visibility: hidden;
     }
   }
 

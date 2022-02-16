@@ -4,13 +4,16 @@
 
   // .how-we-do__container
 
-  &__container {
-  }
+  &__container {}
 
   // .how-we-do__title
 
   &__title {
     margin-bottom: 60px;
+
+    @include min {
+      text-align: center;
+    }
   }
 
   // .how-we-do__list
@@ -30,8 +33,8 @@
     flex-direction: column;
     position: relative;
 
-    &::before{
-      content: "0" counter(section);
+    &::before {
+      content: "0"counter(section);
       counter-increment: section;
       font-weight: 700;
       font-size: 46px;
@@ -39,8 +42,9 @@
       color: $grey-400;
       margin-bottom: 30px;
     }
-    &:not(:last-child){
-      &::after{
+
+    &:not(:last-child) {
+      &::after {
         content: "";
         position: absolute;
         right: 0;
@@ -51,7 +55,21 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+
+        @include tablet {
+          display: none;
+        }
       }
+    }
+
+    @include mobile {
+      grid-column: 6 span;
+    }
+    @include min {
+      grid-column: 12 span;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
   }
 

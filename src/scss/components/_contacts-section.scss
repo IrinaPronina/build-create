@@ -31,18 +31,22 @@
     0px 12px 10px -6px rgba(30, 33, 44, 0.08),
     0px 4px 4px -4px rgba(30, 33, 44, 0.05);
 
+  @include min {
+    padding: 48px 20px;
+  }
+
   // .contacts-form__title
 
   &__title {
     width: 100%;
     font-size: 28px;
     font-weight: 700;
-    align-items: center;
+    text-align: center;
     color: $dark;
     margin-bottom: 24px;
   }
 
-
+  margin-bottom: 20px;
 }
 
 .form-field {
@@ -51,9 +55,7 @@
 
   // .form-field__input
 
-  &__input {
-    margin-bottom: 20px;
-  }
+  &__input {}
 
 
   // .form-field__input--big
@@ -63,5 +65,3 @@
     resize: none;
   }
 }
-
-

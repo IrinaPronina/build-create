@@ -6,6 +6,9 @@
 
   margin-right: 24px;
 
+  @include min {
+    margin-right: 0;
+  }
 
   // .form-field__caption
 
@@ -13,6 +16,7 @@
     font-size: 14px;
     color: $dark-grey;
     margin-bottom: 8px;
+    text-align: left;
   }
 
   &__input {
@@ -28,19 +32,23 @@
   &--message {
     flex-grow: 1;
 
-    .form-field__input{
+    .form-field__input {
       width: 100%;
+    }
+
+    @include tablet {
+      flex-grow: 0;
     }
   }
 
-  &__btn{
+  &__btn {
     padding: 11px 28px;
   }
 
-  &--dark{
+  &--dark {
     width: 100%;
 
-    .form-field__input{
+    .form-field__input {
       width: 100%;
       background-color: $grey-200;
     }

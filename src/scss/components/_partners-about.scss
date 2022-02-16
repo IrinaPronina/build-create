@@ -1,0 +1,64 @@
+.partners-about {
+  background-color: $white;
+
+  &--light {
+    padding-top: 180px;
+    background-color: $white;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__descr {
+    color: $grey-700;
+  }
+
+  // .partners-about__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 102px;
+    margin-bottom: 30px;
+
+    @include tablet {
+      gap: 60px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  // .partners-about__item
+
+  &__item {}
+
+  // .partners-about__link
+
+  &__link {}
+
+  // .partners-about__logo
+
+  &__logo {}
+}
+
+.map {
+  padding-top: 80px;
+  background-color: $grey-200;
+
+  &__img {
+    @include tablet {
+      object-fit: contain;
+    }
+  }
+
+  @include tablet {
+    padding: 60px 0 40px 0;
+  }
+
+  @include min {
+    display: none;
+  }
+}

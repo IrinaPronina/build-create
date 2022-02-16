@@ -26,6 +26,10 @@
 
   &__table {
     z-index: 5;
+
+
+
+
   }
 }
 
@@ -39,6 +43,10 @@
   width: 100%;
   box-shadow: var(--main-shadow);
   background-color: $white;
+
+  @include mobile {
+    overflow-x: auto;
+  }
 }
 
 
@@ -46,7 +54,9 @@
   border-collapse: collapse;
   width: 100%;
 
-
+  @include mobile {
+    width: 1200px;
+  }
 
   // .table__row
 
@@ -118,6 +128,10 @@
       padding: 0px 24px;
       font-size: 12px;
       line-height: 3;
+
+      @include mobile {
+        padding: 0 4px;
+      }
     }
   }
 

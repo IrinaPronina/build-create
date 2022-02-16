@@ -12,11 +12,24 @@
     grid-template-columns: repeat(3, 1fr);
     gap: calc(var(--mission-gap) * 2);
     margin-bottom: 27px;
+
+    @include minidesktop {
+      --mission-gap: 34px;
+    }
+
+    @include tablet {
+      --mission-gap: 12px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
-  // .value__item
+
 
   &__item {
+
     position: relative;
 
     &:nth-child(2) {
@@ -38,6 +51,9 @@
         background-image: url(../img/divider.png);
       }
     }
+    @include mobile {
+      margin-bottom: 12px;
+    }
   }
 
   // .contacts-info__subtitle
@@ -48,6 +64,14 @@
     line-height: 1.5;
     color: $dark;
     margin-bottom: 24px;
+
+    @include tablet {
+      font-size: 22px;
+    }
+
+    @include mobile {
+      margin-bottom: 12px;
+    }
   }
 
   // .contacts-info__address
@@ -57,6 +81,15 @@
     line-height: 1.6;
     color: $dark;
     margin-bottom: 4px;
+
+  }
+
+  &__descr {
+    margin-top: 20px;
+
+    @include mobile {
+      margin-top: 10px;
+    }
   }
 
   // .contacts-info__link
@@ -64,7 +97,6 @@
   &__link {
     color: $primary;
     text-decoration: underline;
-    margin-bottom: 20px;
   }
 
   // .contacts-info__text

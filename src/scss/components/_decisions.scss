@@ -8,6 +8,10 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 30px;
+
+    @include mobile {
+      display: block;
+    }
   }
 
   // .decisions__left
@@ -15,13 +19,18 @@
   &__left {
     grid-column: 5 span;
     position: relative;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   // .decisions__img
 
   &__img {
     position: absolute;
-    top: 0;left: 0;
+    top: 0;
+    left: 0;
   }
 
   // .decisions__right
@@ -29,12 +38,24 @@
   &__right {
     grid-column: 7 span;
     padding-left: 104px;
+
+    @include tablet {
+      padding-left: 30px;
+    }
+
+    @include min {
+      padding-left: 0;
+    }
   }
 
   // .decisions__title
 
   &__title {
     margin-bottom: 60px;
+
+    @include min {
+      text-align: center;
+    }
   }
 
   // .decisions__list
@@ -54,7 +75,7 @@
       margin-bottom: 20px;
     }
 
-    &::before{
+    &::before {
       content: '';
       position: absolute;
       left: 0;
@@ -69,6 +90,10 @@
   }
 }
 
-.similar{
+.similar {
   padding: 180px 0 120px;
+
+  @include min {
+    padding: 40px 0;
+  }
 }

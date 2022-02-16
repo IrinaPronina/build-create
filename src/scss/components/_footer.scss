@@ -9,6 +9,7 @@
   &__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+
   }
 
   &__logo {
@@ -20,6 +21,11 @@
   &__left {
     grid-column: 7 span;
     margin-bottom: 73px;
+
+    @include mobile {
+      grid-column: 12 span;
+      margin-bottom: 40px;
+    }
   }
 
   &__top {
@@ -30,15 +36,28 @@
 
   &__form {
     grid-column: 5 span;
+
+    @include mobile {
+      grid-column: 12 span;
+      margin-bottom: 30px;
+    }
   }
 
   &__address {
     grid-column: 4 span;
     margin-bottom: 60px;
+
+    @include min {
+      grid-column: 12 span;
+    }
   }
 
   &__nav {
     grid-column: 8 span;
+
+    @include min {
+      grid-column: 12 span;
+    }
   }
 
 
@@ -86,6 +105,12 @@
     display: block;
     width: 24px;
     height: 24px;
+
+    &:hover {
+      .network__icon {
+        opacity: 1;
+      }
+    }
   }
 
   &__icon {
@@ -95,6 +120,7 @@
     object-fit: contain;
     opacity: 0.6;
     fill: $white;
+    transition: all ease 0.3s;
   }
 }
 
@@ -162,6 +188,10 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 13px;
+
+    @include mobile {
+      font-size: 18px;
+    }
   }
 
   // .footer-address__item
@@ -172,12 +202,21 @@
     &:not(:last-child) {
       margin-bottom: 4px;
     }
+
+
   }
 
   &__item a {
     line-height: 1.6;
     color: rgba($color: $white, $alpha: 0.6);
     margin-bottom: 4px;
+    transition: all ease 0.3s;
+
+    &:hover {
+
+      color: rgba($color: $white, $alpha: 1);
+
+    }
   }
 
   // .footer-address__name
@@ -191,12 +230,24 @@
   padding-left: 54px;
   display: flex;
 
+  @include min {
+    padding-left: 0;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
 
   // .footer-nav__col
 
   &__col {
+
     &:not(:last-child) {
       padding-right: 125px;
+
+      @include mobile {
+        padding-right: 24px;
+      }
+
     }
   }
 
@@ -208,6 +259,10 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 13px;
+
+    @include mobile {
+      font-size: 18px;
+    }
   }
 
   // .footer-nav__list
@@ -231,5 +286,12 @@
   &__link {
     line-height: 1.6;
     color: rgba($color: $white, $alpha: 0.6);
+    transition: all ease 0.3s;
+
+    &:hover {
+
+      color: rgba($color: $white, $alpha: 1);
+
+    }
   }
 }
